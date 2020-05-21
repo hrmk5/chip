@@ -1,0 +1,8 @@
+(print 4 + 5;
+ let a = 10 + 20 * 30;
+ print a;
+ let b = if true then 40 else 50;
+ print b + 10;
+ let c = (341, 41414);
+ print (#0 c + #1 c);
+ print "Finished")
