@@ -11,6 +11,7 @@ let new_label () =
   label
 
 let label_str label = "L" ^ string_of_int label
+let label_int label = label
 
 (* Temporary *)
 

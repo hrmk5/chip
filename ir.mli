@@ -1,6 +1,7 @@
 type label
 val new_label : unit -> label
 val label_str : label -> string
+val label_int: label -> int
 
 type temp
 val new_temp : unit -> temp
