@@ -4,5 +4,4 @@
  let b = if true then 40 else 50;
  print b + 10;
  let c = (341, 41414);
- print (#0 c + #1 c);
- print "Finished")
+ print (#0 c + #1 c))
