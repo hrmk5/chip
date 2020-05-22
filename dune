@@ -1,4 +1,7 @@
 (ocamllex lexer)
 
+(menhir
+ (modules parser))
+
 (executable
- (name chip))
+  (name chip))
