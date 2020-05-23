@@ -29,7 +29,7 @@ let rec genir labels i irs : int LabelMap.t * B.inst list =
      genir labels i rest
   | ir::rest ->
      let inst = gen ir in
-     let (labels, rest_insts) = genir labels (i + 1) rest in
+     let (labels, rest_insts) = genir labels (i + List.length inst) rest in
      (labels, inst @ rest_insts)
 
 let resolve labels inst = match inst with
