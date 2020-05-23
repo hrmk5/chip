@@ -7,6 +7,8 @@ let main () =
   List.iter Ir.dump_ir ir;
   print_endline "--------------------";
   let bytecode = Gen.gen ir in
-  Bytecode.dump_bytecode bytecode;;
+  Bytecode.dump_bytecode bytecode;
+  print_endline "---------------------";
+  Eval.eval bytecode;;
 
 main ()
