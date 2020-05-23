@@ -44,4 +44,5 @@ let resolve labels inst = match inst with
 let gen irs =
   let (labels, irs) = genir LabelMap.empty 0 irs in
   let irs = List.map (resolve labels) irs in
+  let irs = irs @ [B.END] in
   B.from_list irs

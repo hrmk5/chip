@@ -14,10 +14,12 @@ type inst =
   | JUMP of int
   | JUMP_IF_ZERO of int
   | PRINT
+  | END
 
 type t
 
 val from_list : inst list -> t
+val get_inst : t -> int -> inst
 
 val dump_inst : int -> inst -> unit
 val dump_bytecode : t -> unit

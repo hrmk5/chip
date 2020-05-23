@@ -16,11 +16,17 @@ type inst =
   | JUMP of int
   | JUMP_IF_ZERO of int
   | PRINT
+  | END
 
 type t = inst Array.t
 
 let from_list insts =
   Array.of_list insts
+
+let get_inst bytecode pos =
+  Array.get bytecode pos
+
+(* Dump *)
 
 let dump_inst i inst =
   printf "%d  " i;
@@ -40,6 +46,7 @@ let dump_inst i inst =
   | JUMP i -> printf "JUMP %d\n" i
   | JUMP_IF_ZERO i -> printf "JUMP_IF_ZERO %d\n" i
   | PRINT -> print_endline "PRINT"
+  | END -> print_endline "END"
 
 let dump_bytecode bc =
   Array.iteri dump_inst bc
